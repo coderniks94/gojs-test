@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[var $ = go.GraphObject.make;
+var myDiagram =
+  $(go.Diagram, "myDiagramDiv",
+    {
+      "undoManager.isEnabled": true // enable Ctrl-Z to undo and Ctrl-Y to redo
+    });
+
+var myModel = $(go.Model);
+// in the model data, each node is represented by a JavaScript object:
+myModel.nodeDataArray = [
+  { key: "Alpha" },
+  { key: "Beta" },
+  { key: "Gamma" }
+];
+myDiagram.model = myModel;]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_gojs_test_UML test.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<!-- <script src="https://unpkg.com/gojs/release/go-debug.js"></script> -->
+	<!-- <g:requires name="scripts/libs/gojs/1.5/gojs.js" includes="true"/> -->
+	<g:requires name="scripts/libs/gojs/1.7/gojs.js" includes="true"/>
+	<div id="myDiagramDiv" style="width:400px; height:150px; background-color: #DAE4E4;"></div>
+
+</j:jelly>]]></html>
+        <name>UML test</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-30 14:34:40</sys_created_on>
+        <sys_id>69e679739d594010964f15340cf80fc1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>UML test</sys_name>
+        <sys_package display_value="GoJS Test" source="x_gojs_test">793319739d194010964f15340cf80f7a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GoJS Test">793319739d194010964f15340cf80f7a</sys_scope>
+        <sys_update_name>sys_ui_page_69e679739d594010964f15340cf80fc1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-30 14:35:54</sys_updated_on>
+    </sys_ui_page>
+</record_update>
